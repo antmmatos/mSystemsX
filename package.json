@@ -1,0 +1,45 @@
+{
+  "name": "msystemsx",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "next-ws patch"
+  },
+  "dependencies": {
+    "@awesome.me/kit-ad5a070521": "^1.0.19",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/spotify-web-api-node": "^5.0.11",
+    "axios": "^1.8.3",
+    "bcryptjs": "^3.0.2",
+    "mysql2": "^3.12.0",
+    "next": "15.2.2",
+    "next-auth": "5.0.0-beta.25",
+    "next-ws": "^2.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-toastify": "^11.0.5",
+    "spotify-web-api-node": "^5.0.2",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.0",
+    "@types/node": "^20.17.23",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/ws": "^8.18.0",
+    "eslint": "^9.21.0",
+    "eslint-config-next": "15.1.7",
+    "typescript": "^5.8.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  }
+}

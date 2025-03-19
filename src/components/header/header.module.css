@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: var(--second-color);
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.titlex {
+    color: var(--third-color);
+    font-size: 65px !important;
+}
+
+.subtitle {
+    color: var(--second-color);
+    margin-bottom: 0;
+}
