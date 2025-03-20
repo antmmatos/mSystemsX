@@ -176,9 +176,9 @@ const SoundSystemContainer = () => {
             btn.disabled = false;
             return;
         }
-        const data = await fetch(`/api/music/spotify?music=${searchValue}`);
+        const data = await fetch(`/api/music/search?music=${searchValue}`);
         const response = await data.json();
-        setSearchTracks(response);
+        setSearchTracks(response.data);
         btn.disabled = false;
     }
 
