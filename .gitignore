@@ -39,3 +39,4 @@ refresh_token
 code
 expires_in
 .env
+.vercel
