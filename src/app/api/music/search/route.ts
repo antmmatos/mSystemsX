@@ -7,5 +7,8 @@ export async function GET(request: NextRequest) {
         return { status: 400, body: "Missing music parameter" };
     }
     const searchResults = await Spotify.SearchSong(musicSearchData);
-    return NextResponse.json(searchResults);
+    return NextResponse.json({
+        success: true,
+        data: searchResults
+    });
 }
