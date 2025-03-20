@@ -1,9 +1,8 @@
 import axios from "axios";
 import { readFromJson, writeToJson } from "./file";
-import { kMaxLength } from "buffer";
 
-const CLIENT_ID = "ee9a2c359dd647d19cb1fd7123c9a8cf";
-const CLIENT_SECRET = "4c3aba2de8064cbe920825bdb5611d30";
+const CLIENT_ID = process.env.PUBLIC_SPOTIFY_CLIENT_ID;
+const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 const REDIRECT_URI = "http://localhost:3000/api/music/auth/";
 
 export const Spotify = {

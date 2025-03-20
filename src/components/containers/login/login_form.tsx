@@ -15,7 +15,7 @@ const LoginForm = () => {
             const request = await authenticate(formData);
             if (request.success) {
                 toast.success("Logged in successfully");
-                router.push("https://accounts.spotify.com/authorize?client_id=ee9a2c359dd647d19cb1fd7123c9a8cf&response_type=code&redirect_uri=http://localhost:3000/api/music/auth/&scope=user-read-playback-state user-modify-playback-state");
+                router.push(`https://accounts.spotify.com/authorize?client_id=${process.env.PUBLIC_SPOTIFY_CLIENT_ID}&response_type=code&redirect_uri=http://localhost:3000/api/music/auth/&scope=user-read-playback-state user-modify-playback-state`);
             } else {
                 toast.error("Invalid username or password");
             }

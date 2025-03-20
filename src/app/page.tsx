@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 const Login = async () => {
     const session = await auth();
     if (session) {
-        redirect("https://accounts.spotify.com/authorize?client_id=ee9a2c359dd647d19cb1fd7123c9a8cf&response_type=code&redirect_uri=http://localhost:3000/api/music/auth/&scope=user-read-playback-state user-modify-playback-state");
+        redirect(`https://accounts.spotify.com/authorize?client_id=${process.env.PUBLIC_SPOTIFY_CLIENT_ID}&response_type=code&redirect_uri=http://localhost:3000/api/music/auth/&scope=user-read-playback-state user-modify-playback-state`);
     }
 
     return (
