@@ -4,7 +4,10 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request: NextRequest) {
     const musicSearchData = request.nextUrl.searchParams.get("music");
     if (!musicSearchData) {
-        return { status: 400, body: "Missing music parameter" };
+        return NextResponse.json({
+            success: false,
+            message: "No search data provided"
+        });
     }
     const searchResults = await Spotify.SearchSong(musicSearchData);
     return NextResponse.json({
