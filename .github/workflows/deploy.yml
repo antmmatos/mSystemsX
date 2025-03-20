@@ -1,0 +1,42 @@
+name: Deploy Next.js 15
+
+on:
+  push:
+    branches:
+      - action_testing  # Ou a branch que você deseja usar
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configure FontAwesome NPM Auth Token
+        env:
+          FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
+        run: |
+          echo "@awesome.me:registry=https://npm.fontawesome.com/" > ~/.npmrc
+          echo "@fortawesome:registry=https://npm.fontawesome.com/" >> ~/.npmrc
+          echo "//npm.fontawesome.com/:_authToken=${FONTAWESOME_NPM_AUTH_TOKEN}" >> ~/.npmrc
+      
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Construir o projeto
+        run: npm run build
+
+      - name: Fazer deploy no Vercel (se estiver usando Vercel)
+        run: npx vercel --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
+
+      # - name: Fazer deploy no servidor (se estiver usando um VPS)
+      #   run: |
+      #     scp -r .next user@server:/caminho/do/projeto
+      #     ssh user@server "pm2 restart next-app"

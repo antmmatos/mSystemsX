@@ -1,0 +1,159 @@
+.management__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.management__title__container {
+    margin-bottom: 40px;
+    width: 500px;
+}
+
+.management__title {
+    color: var(--second-color);
+    font-size: 35px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    animation: title 0.75s;
+}
+
+.management__titleline {
+    width: 0px;
+    animation: bar 0.75s;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+    margin-inline-end: 0;
+    opacity: 0;
+}
+
+.management__accounts__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 750px;
+    margin-bottom: 40px;
+}
+
+.management__accounts__scrollable {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.management__accounts__scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+.management__accounts__scrollable::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.management__accounts__scrollable::-webkit-scrollbar-track {
+    display: none;
+}
+
+.management__account__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid var(--second-color);
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    animation: main 0.75s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.management__account__description {
+    width: 220px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--second-color);
+    width: 100%;
+}
+
+.management__account__erase {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    background-color: transparent;
+    color: var(--second-color);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.management__account__erase:hover:not(:disabled) {
+    background-color: var(--third-color);
+}
+
+.management__accounts__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    margin-bottom: 10px;
+    box-sizing: content-box;
+}
+
+.management__accounts__description {
+    width: 220px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--second-color);
+    width: 100%;
+}
+
+@keyframes title {
+    from {
+        margin-right: 50px;
+        opacity: 0;
+    }
+    to {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes bar {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 500px;
+        opacity: 1;
+    }
+}
+
+@keyframes main {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,43 @@
+:root {
+    --main-color: #202020;
+    --second-color: #f8f8f8;
+    --third-color: #ff3f3f;
+    overflow-x: hidden;
+
+    --queue-title-width: -100%;
+    --queue-artists-width: -100%;
+    --player-title-width: -100%;
+    --player-artists-width: -100%;
+}
+
+* {
+    outline: none;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("/bg.jpg");
+    background-size: 40%;
+    background-repeat: repeat;
+    background-position: center;
+    backdrop-filter: blur(15px);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#particles {
+    position: absolute;
+    height: 99vh;
+    z-index: -1;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.red {
+    color: var(--third-color);
+}
