@@ -60,6 +60,8 @@ mSystemsX is a web control panel developed to manage and monitor my personal hom
    - Example `.env` file:
    ```
    AUTH_SECRET=""
+   PUBLIC_SPOTIFY_CLIENT_ID=
+   SPOTIFY_CLIENT_SECRET=
    DB_HOST=localhost
    DB_USER=root
    DB_PASSWORD=""
