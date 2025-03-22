@@ -67,6 +67,7 @@ mSystemsX is a web control panel developed to manage and monitor my personal hom
    DB_PASSWORD=""
    DB_NAME=msystemsx
    BASE_URL=http://localhost:3000
+   PUBLIC_PROXMOX_HOST=proxmox.local:8006
    ```
 4. Start the server:
    ```

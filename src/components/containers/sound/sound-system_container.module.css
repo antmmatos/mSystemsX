@@ -57,7 +57,7 @@
     align-items: center;
     height: 100%;
     width: 350px;
-    background-color: #20202099;
+    background-color: var(--bg-color);
     border-radius: 5px 5px 0 0;
     backdrop-filter: blur(15px);
     border-bottom: 2px solid var(--second-color);
@@ -142,7 +142,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: #20202099;
+    background: var(--bg-color);
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -271,7 +271,7 @@
     font-size: 15px;
     padding: 10px;
     border-bottom: 2px solid var(--second-color);
-    background-color: #20202099;
+    background-color: var(--bg-color);
     color: var(--second-color);
     transition: 0.3s;
     border-radius: 5px 5px 0 0;
@@ -362,7 +362,7 @@
     align-items: center;
     height: 100px;
     width: 100%;
-    background-color: #20202099;
+    background-color: var(--bg-color);
     border-radius: 5px 5px 0 0;
     border-bottom: 2px solid var(--second-color);
     animation: main 0.75s;

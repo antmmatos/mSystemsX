@@ -3,7 +3,6 @@ import Header from "@/components/header/header";
 import styles from "./dashboard.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftFromBracket, faEnvelope, faKey, faNetworkWired, faServer, faSignal, faUsers, faWaveformLines } from "@awesome.me/kit-ad5a070521/icons/duotone/solid";
-import { toast } from "react-toastify";
 
 export default async function Home() {
     return (
@@ -15,13 +14,13 @@ export default async function Home() {
                     <hr />
                 </div>
                 <ul className={styles.navbar}>
-                    <a href="http://proxmox.msystemsx.cloud">
+                    <a href={"http://" + process.env.PUBLIC_PROXMOX_HOST + "/"} target="_blank" rel="noopener noreferrer">
                         <li className={styles.navbar__element} data-anim={1}>
                             <FontAwesomeIcon icon={faNetworkWired} />
                             Proxmox System
                         </li>
                     </a>
-                    <a href="">
+                    <a href="/dashboard/virtual-machines">
                         <li className={styles.navbar__element} data-anim={2}>
                             <FontAwesomeIcon icon={faServer} />
                             Virtual Machines
